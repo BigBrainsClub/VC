@@ -1,0 +1,12 @@
+[package]
+name = "vc"
+version = "0.1.0"
+edition = "2021"
+authors = ["BigBrainsClub <90547216+bigbrainsclub@users.noreply.github.com>"]
+description = "Библиотека для быстрой валидации email/login/password"
+license = "BSD 2-Clause"
+repository = "https://github.com/BigBrainsClub/VC"
+categories = ["reading", "file"]
+readme = "README.md"
+
+[dependencies]
