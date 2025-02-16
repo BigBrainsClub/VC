@@ -16,10 +16,15 @@ pub fn is_valid_phone_number(number: &[u8]) -> bool {
         let mut count_read_end: bool = false;
         let mut count_digit: u8 = 0;
         
-        if *ptr == b'+' {
+        let first_ptr = *ptr;
+        if first_ptr == b'+' {
             ptr = ptr.add(1);
             first_plus = true;
         }
+        else if !(first_ptr >= b'0' && first_ptr <= b'9' || first_ptr == b'(') {
+            return false;
+        }
+
         
         while ptr < end {
             let b: u8 = *ptr;
